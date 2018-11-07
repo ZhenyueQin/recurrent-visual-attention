@@ -54,6 +54,7 @@ def get_train_valid_loader(data_dir,
     dataset = datasets.MNIST(
         data_dir, train=True, download=True, transform=trans
     )
+    print('type of MNIST dataset: ', type(dataset))
 
     num_train = len(dataset)
     indices = list(range(num_train))
